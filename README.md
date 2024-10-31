@@ -9,9 +9,9 @@ A simple web application that demonstrates API integration using the [PokeAPI](h
 - Simple and clean user interface
 
 ## How it looks like
-![Charizard search](scrnshot1.png)
-![Pikachu search](scrnshot2.png)
-![Error](error-scrnshot.png)
+<img src="scrnshot1.png" alt="Charizard search" width="400"/>
+<img src="scrnshot2.png" alt="Pikachu search" width="400"/>
+<img src="error-scrnshot.png" alt="Error" width="400"/>
 
 ## Technologies Used
 - HTML
