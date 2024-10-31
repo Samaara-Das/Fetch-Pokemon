@@ -1,25 +1,9 @@
 'use strict';
 
-// method 1
-// fetch('https://pokeapi.co/api/v2/pokemon/pokemon')
-// .then(response => {
-//   console.log('reached in then 1');
-//   if(!response.ok){
-//     throw new Error('Could not fetch resource')
-//   }
-//   return response.json()
-// })
-// .then(data => {
-//   console.log('reached in then 2');
-//   console.log(data.name);
-// })
-// .catch(error => {
-//   console.log('reached in catch');
-//   console.error('Error:', error);
-// })
-
-// method 2
 async function fetchData(){
+  // Clear any previous error messages and hide previous pokemon
+  clearPreviousResults();
+  
   try{
     // get the pokemon's name and fetch data for it
     const pokemonName = document.getElementById('pokemonName').value.toLowerCase();
@@ -27,7 +11,7 @@ async function fetchData(){
 
     // if the response is not ok, throw an error
     if(!response.ok){
-      throw new Error('Could not fetch resource')
+      throw new Error(`Pokemon "${pokemonName}" not found!`);
     }
 
     // get the pokemon's image and display it
@@ -39,6 +23,18 @@ async function fetchData(){
   }
   catch(error){
     console.error('Error:', error);
+    // Display error message to user
+    displayErrorMessage(error.message);
   }
 }
 
+function clearPreviousResults() {
+  const errorElement = document.getElementById('errorMessage');
+  errorElement.textContent = '';
+  document.getElementById('pokemonSprite').style.display = 'none';
+}
+
+function displayErrorMessage(message) {
+  const errorElement = document.getElementById('errorMessage');
+  errorElement.textContent = error.message;
+}
