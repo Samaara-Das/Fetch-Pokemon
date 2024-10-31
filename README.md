@@ -14,7 +14,7 @@ A simple web application that demonstrates API integration using the [PokeAPI](h
 - HTML
 - JavaScript
 - [PokeAPI](https://pokeapi.co/) - A RESTful Pokemon API
-- 
+
 ## Learning Outcomes
 
 This project demonstrates:
